@@ -39,7 +39,6 @@
             margin-bottom: 0.5em;
         }
 
-        /* Updated nav to match the style */
         nav {
             background-color: #1e90ff;
             padding: 10px 0;
@@ -68,7 +67,7 @@
             position: absolute;
             right: 20px;
             top: 15px;
-            color: #ffffff; /* White hamburger menu icon */
+            color: #ffffff;
         }
 
         .nav-links {
@@ -78,13 +77,13 @@
 
         @media (max-width: 768px) {
             nav {
-                background-color: #ffffff; /* White background before opening on mobile */
+                background-color: #ffffff;
             }
 
             .nav-links {
                 display: none;
                 flex-direction: column;
-                background-color: #1e90ff; /* Blue background for mobile after menu opens */
+                background-color: #1e90ff;
                 position: absolute;
                 top: 50px;
                 left: 0;
@@ -101,11 +100,11 @@
             }
 
             nav a {
-                color: #ffffff; /* White text when the menu is opened */
+                color: #ffffff;
             }
 
             nav a:hover {
-                background-color: #104e8b; /* Darker blue highlight when menu is open */
+                background-color: #104e8b;
                 color: #ffffff;
             }
         }
@@ -114,11 +113,19 @@
             max-width: 1200px;
             margin: 30px auto;
             padding: 20px;
+            text-align: center; /* Center the content */
+        }
+
+        /* Centering the "Our Services" heading */
+        h2#services {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(3, 1fr); /* 3 services per row on desktop */
             grid-gap: 30px;
         }
 
@@ -266,7 +273,6 @@
             color: white;
         }
 
-        /* Updated Footer Styles */
         footer {
             background-color: #1e90ff;
             color: #ffffff;
@@ -299,7 +305,7 @@
             }
 
             .services-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-template-columns: repeat(2, 1fr); /* 2 services per row on mobile */
             }
 
             header h1 {
@@ -494,8 +500,8 @@ function submitReview(event, serviceName) {
 function goBack() {
     const container = document.getElementById('serviceContainer');
     container.innerHTML = `<h2 id="services">Our Services</h2><div class="services-grid" id="servicesGrid"></div>`;
-    loadServices(); // Reload the services
-    window.history.pushState({}, '', window.location.pathname); // Clear URL parameters
+    loadServices();
+    window.history.pushState({}, '', window.location.pathname);
 }
 
 // Check URL to render a specific service if applicable
@@ -513,7 +519,7 @@ function checkUrlForService() {
             })
             .catch(error => console.error('Error loading service details:', error));
     } else {
-        loadServices(); // Load all services if no specific service is in URL
+        loadServices();
     }
 }
 
