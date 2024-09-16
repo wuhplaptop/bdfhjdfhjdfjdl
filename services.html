@@ -39,16 +39,16 @@
             margin-bottom: 0.5em;
         }
 
+        /* Updated nav to match the style */
         nav {
-            background-color: #ffffff;
+            background-color: #1e90ff;
             padding: 10px 0;
             text-align: center;
             position: relative;
-            border-bottom: 1px solid #ddd;
         }
 
         nav a {
-            color: #333;
+            color: #ffffff;
             text-decoration: none;
             margin: 0 20px;
             font-size: 1.2em;
@@ -57,7 +57,7 @@
         }
 
         nav a:hover {
-            background-color: #1e90ff;
+            background-color: #104e8b;
             color: #ffffff;
         }
 
@@ -68,6 +68,7 @@
             position: absolute;
             right: 20px;
             top: 15px;
+            color: #ffffff; /* White hamburger menu icon */
         }
 
         .nav-links {
@@ -76,10 +77,14 @@
         }
 
         @media (max-width: 768px) {
+            nav {
+                background-color: #ffffff; /* White background before opening on mobile */
+            }
+
             .nav-links {
                 display: none;
                 flex-direction: column;
-                background-color: #ffffff;
+                background-color: #1e90ff; /* Blue background for mobile after menu opens */
                 position: absolute;
                 top: 50px;
                 left: 0;
@@ -93,6 +98,15 @@
 
             .menu-toggle {
                 display: block;
+            }
+
+            nav a {
+                color: #ffffff; /* White text when the menu is opened */
+            }
+
+            nav a:hover {
+                background-color: #104e8b; /* Darker blue highlight when menu is open */
+                color: #ffffff;
             }
         }
 
@@ -252,7 +266,7 @@
             color: white;
         }
 
-        /* Footer Styles */
+        /* Updated Footer Styles */
         footer {
             background-color: #1e90ff;
             color: #ffffff;
@@ -260,6 +274,15 @@
             padding: 20px 0;
             margin-top: 40px;
             box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ffcc00;
         }
 
         footer h3 {
