@@ -348,7 +348,6 @@ function renderServices(services) {
     grid.innerHTML = '';
 
     services.forEach(service => {
-        // Ensure that there are valid image URLs and remove any empty strings
         const validImageUrls = service.imageUrls.filter(url => url.trim() !== '');
 
         const thumbnails = validImageUrls.map(url => 
@@ -377,14 +376,12 @@ function renderServices(services) {
 function showServiceDetails(service) {
     const container = document.getElementById('serviceContainer');
     
-    // Filter valid image URLs
     const validImageUrls = service.imageUrls.filter(url => url.trim() !== '');
 
     const thumbnails = validImageUrls.map(url => 
         `<img src="${url}" alt="Thumbnail" onclick="swapMainImage('${url}')" style="width: 60px; height: 60px; cursor: pointer;">`
     ).join('');
 
-    // Ensure reviews are mapped properly with reviewer name and comment
     const reviewsHtml = service.reviews.map(review => {
         const reviewer = review.reviewer ? review.reviewer : 'Anonymous';
         const comment = review.comment ? review.comment : 'No comment provided';
@@ -425,7 +422,7 @@ function showServiceDetails(service) {
                 </div>
             </div>
         </div>
-        <a href="#" class="back-button" onclick="goBack()">Back to Services</a>
+        <a href="javascript:void(0);" class="back-button" onclick="goBack()">Back to Services</a>
     `;
 }
 
@@ -446,7 +443,6 @@ function submitReview(event, serviceName) {
         .then(response => response.json())
         .then(data => {
             if (data.status === 'success') {
-                // Append the new review to the list
                 const reviewList = document.getElementById('reviewList');
                 reviewList.innerHTML += `
                     <div class="review">
@@ -464,7 +460,9 @@ function submitReview(event, serviceName) {
 
 // Go back to services grid
 function goBack() {
-    loadServices();
+    const container = document.getElementById('serviceContainer');
+    container.innerHTML = `<h2 id="services">Our Services</h2><div class="services-grid" id="servicesGrid"></div>`;
+    loadServices(); // Reload the services
 }
 
 // Load services on page load
