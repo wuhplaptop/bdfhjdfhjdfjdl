@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="J&L Power Washing - Home">
+    <meta property="og:description" content="Professional Power Washing Services for Home and Business.">
+    <meta property="og:image" content="https://github.com/wuhplaptop/432-fdf-sdg-gt34-g/blob/main/horses/horselogo.jpg?raw=true">
+    <meta property="og:url" content="https://jandlpowerwashing.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="description" content="J&L Power Washing - Reliable, Professional, Affordable Power Washing Services.">
+    <title>J&L Power Washing - Home</title>
+
+    <link rel="icon" href="https://github.com/wuhplaptop/432-fdf-sdg-gt34-g/blob/main/horses/horselogo.jpg?raw=true" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://github.com/wuhplaptop/432-fdf-sdg-gt34-g/blob/main/horses/horselogo.jpg?raw=true">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://github.com/wuhplaptop/432-fdf-sdg-gt34-g/blob/main/horses/horselogo.jpg?raw=true">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://github.com/wuhplaptop/432-fdf-sdg-gt34-g/blob/main/horses/horselogo.jpg?raw=true">
+
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1e90ff;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 0.2em;
+        }
+
+        nav {
+            background-color: #1e90ff;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #104e8b;
+            color: #ffffff;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 2em;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            color: #1e90ff;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                background-color: #ffffff; /* White background before opening on mobile */
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #1e90ff; /* Blue background for mobile after menu opens */
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                margin: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+                color: #1e90ff; /* Blue hamburger menu */
+            }
+
+            header {
+                background-color: #ffffff; /* Set white background for header on mobile */
+                color: #333;
+            }
+
+            nav a {
+                color: #ffffff; /* White text when the menu is opened */
+            }
+
+            nav a:hover {
+                background-color: #104e8b; /* Darker blue highlight when menu is open */
+                color: #ffffff;
+            }
+
+            .nav-links.active nav a {
+                color: #ffffff; /* Ensure white text when the mobile menu is open */
+            }
+
+            .nav-links.active nav a:hover {
+                background-color: #104e8b; /* Darker blue hover when the mobile menu is open */
+                color: #ffffff;
+            }
+        }
+
+        .welcome-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .welcome-section h2 {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .welcome-section p {
+            font-size: 1.2em;
+            color: #666;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .cta-section .cta-button {
+            padding: 15px 30px;
+            background-color: #ffcc00;
+            color: #333;
+            border-radius: 5px;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-section .cta-button:hover {
+            background-color: #1e90ff;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .about-us {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .about-us h2 {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .about-us p {
+            font-size: 1.2em;
+            color: #666;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 30px;
+        }
+
+        .service-card {
+            background-color: #ffffff;
+            border: 1px solid #1e90ff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .service-card .service-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .service-card h3 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .service-card:hover h3 {
+            color: #1e90ff;
+        }
+
+        footer {
+            background-color: #1e90ff;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer h3 {
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation Menu -->
+<nav>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Our Services</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+</nav>
+
+<!-- Welcome Section -->
+<section class="welcome-section">
+    <h2>Welcome to J&L Power Washing</h2>
+    <p>We are your trusted experts in power washing services. Whether it’s your home or business, we ensure spotless cleaning every time. Contact us today to schedule your next power wash.</p>
+</section>
+
+<!-- Call to Action Section -->
+<section class="cta-section">
+    <h2>Need Power Washing?</h2>
+    <a href="tel:+16163858104" class="cta-button">Call Us: +1 616 385 8104</a>
+</section>
+
+<!-- About Us Section -->
+<section class="about-us">
+    <h2>About Us</h2>
+    <p>At J&L Power Washing, we provide high-quality power washing services for both homes and businesses. With years of experience, we are dedicated to offering reliable, affordable, and professional cleaning solutions.</p>
+</section>
+
+<!-- Main container -->
+<div class="container">
+    <h2 id="services">Our Services</h2>
+    <div class="services-grid">
+        <!-- Service Card 1 -->
+        <div class="service-card">
+            <div class="service-content">
+                <h3>General Power Washing</h3>
+                <p>High-pressure washing for all your home or business needs.</p>
+            </div>
+        </div>
+        <!-- Service Card 2 -->
+        <div class="service-card">
+            <div class="service-content">
+                <h3>House Washing</h3>
+                <p>Make your house look brand new with our house washing services.</p>
+            </div>
+        </div>
+        <!-- Service Card 3 -->
+        <div class="service-card">
+            <div class="service-content">
+                <h3>Roof Cleaning</h3>
+                <p>Protect your roof from debris and moss with our cleaning services.</p>
+            </div>
+        </div>
+        <!-- Service Card 4 -->
+        <div class="service-card">
+            <div class="service-content">
+                <h3>Deck Cleaning</h3>
+                <p>Restore your deck's appearance with professional cleaning.</p>
+            </div>
+        </div>
+        <!-- Service Card 5 -->
+        <div class="service-card">
+            <div class="service-content">
+                <h3>Fence Cleaning</h3>
+                <p>Enhance your property's look with a clean and fresh fence.</p>
+            </div>
+        </div>
+        <!-- Service Card 6 -->
+        <div class="service-card">
+            <div class="service-content">
+                <h3>Concrete Cleaning</h3>
+                <p>Make your driveway and walkways spotless with our concrete cleaning.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3 id="contact">Contact Us</h3>
+            <p>James Keeler</p>
+            <p>Phone: +1 616 385 8104</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
+</script>
+
+</body>
+
+</html>
