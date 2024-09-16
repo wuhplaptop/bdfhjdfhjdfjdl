@@ -331,8 +331,8 @@ function toggleMenu() {
     navLinks.classList.toggle('active');
 }
 
-// Updated Google Apps Script API endpoint
-const googleSheetAPI = 'https://script.google.com/macros/s/AKfycbxPMWqKH7upMsS0yTpZe0zEnqt2_2sHuWsLwJPEWa2Duvl0nb2TMpgmoe18Bz4YWLd6Xw/exec';
+// Google Apps Script API endpoint - Updated to Version 4
+const googleSheetAPI = 'https://script.google.com/macros/s/AKfycbxciIF8YzMqNM0BvxRFIYKm4i2qy1ZXPUkzKJaD5zqqEJl95Gf4e430mUKpbwJg8QYGoA/exec';
 
 // Load services data
 function loadServices() {
@@ -439,7 +439,7 @@ function submitReview(event, serviceName) {
     const rating = document.getElementById('rating').value;
     const reviewText = document.getElementById('reviewText').value;
 
-    fetch(googleSheetAPI + `?action=addReview&serviceName=${serviceName}&review=${reviewText}&reviewerName=${reviewerName}`)
+    fetch(googleSheetAPI + `?action=addReview&serviceName=${serviceName}&review=${reviewText}&reviewerName=${reviewerName}&rating=${rating}`)
         .then(response => response.json())
         .then(data => {
             if (data.status === 'success') {
