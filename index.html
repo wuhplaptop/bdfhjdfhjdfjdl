@@ -1,366 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="J&L Power Washing offers professional cleaning services for all surfaces. You name it, we wash it. Call or text 616-356-8102 for deals.">
-    <meta name="keywords" content="power washing, pressure washing, Michigan cleaning service, exterior cleaning, surface cleaning">
-    <meta name="author" content="James Keeler">
-    <title>J&L Power Washing - You Name It, We Wash It</title>
-    <!-- Set 1.png as the favicon -->
-    <link rel="icon" href="1.png" type="image/png">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Social Media Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="J&L Power Washing - Home">
+    <meta property="og:description" content="Professional Power Washing Services for Home and Business.">
+    <meta property="og:image" content="https://github.com/wuhplaptop/432-fdf-sdg-gt34-g/blob/main/horses/horselogo.jpg?raw=true">
+    <meta property="og:url" content="https://jandlpowerwashing.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="description" content="J&L Power Washing - Reliable, Professional, Affordable Power Washing Services.">
+    <title>J&L Power Washing - Our Services</title>
+
+    <!-- Favicon settings -->
+    <link rel="icon" href="https://github.com/wuhplaptop/432-fdf-sdg-gt34-g/blob/main/horses/horselogo.jpg?raw=true" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://github.com/wuhplaptop/432-fdf-sdg-gt34-g/blob/main/horses/horselogo.jpg?raw=true">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://github.com/wuhplaptop/432-fdf-sdg-gt34-g/blob/main/horses/horselogo.jpg?raw=true">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://github.com/wuhplaptop/432-fdf-sdg-gt34-g/blob/main/horses/horselogo.jpg?raw=true">
+
     <style>
-        /* General Reset */
-        * {
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            color: black;
-            line-height: 1.6;
-            background-color: white;
-            transition: background-color 0.5s ease, color 0.5s ease; /* Smoother transition */
-        }
-
-        /* Dark Mode Styling */
-        body.dark-mode {
-            background-color: black;
-            color: white;
-        }
-
-        /* Dark Mode Toggle Button */
-        .dark-mode-toggle {
-            position: fixed;
-            top: 15px;
-            right: 15px;
-            background-color: black;
-            color: white;
-            padding: 10px 20px;
-            cursor: pointer;
-            border: none;
-            border-radius: 25px;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            z-index: 9999;
-        }
-
-        .dark-mode-toggle:hover {
-            background-color: #333;
-        }
-
-        body.dark-mode .dark-mode-toggle {
-            background-color: white;
-            color: black;
-        }
-
-        /* Sliding Announcement at the Top */
-        .announcement-banner {
-            background-color: black;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            display: none; /* Initially hidden */
-            font-size: 14px;
-        }
-
-        body.dark-mode .announcement-banner {
-            background-color: white;
-            color: black;
-        }
-
-        .announcement-content {
-            display: inline-block;
-            white-space: nowrap;
-            animation: scrollBanner 15s linear infinite;
-        }
-
-        @keyframes scrollBanner {
-            from {
-                transform: translateX(100%);
-            }
-            to {
-                transform: translateX(-100%);
-            }
-        }
-
-        /* Header Styles */
         header {
-            background-color: inherit;
-            color: inherit;
-            padding: 60px 20px;
+            background-color: #1e90ff;
+            color: #ffffff;
+            padding: 20px;
             text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
-            font-size: 48px;
-            font-weight: 700;
-            letter-spacing: 2px;
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
         }
 
         header p {
-            font-size: 20px;
+            font-size: 1.2em;
+        }
+
+        nav {
+            background-color: #1e90ff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #ffcc00;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        /* Grid for desktop, mobile responsive */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 30px;
+        }
+
+        /* Service card layout */
+        .service-card {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+
+        .service-card .service-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .service-card h3 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .service-card:hover h3 {
+            color: #1e90ff;
+        }
+
+        .service-card .price {
+            color: #ff8c00;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .service-card .price.tbd {
+            color: #888;
+        }
+
+        .service-card p {
+            color: #555;
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        .rating-section {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
             margin-top: 10px;
         }
 
-        header img {
-            max-width: 150px;
-            margin-bottom: 20px;
+        .rating-section span {
+            font-size: 1.2em;
         }
 
-        /* Specific styles for logos */
-        .logo-light {
-            display: block;
-        }
-
-        .logo-dark {
+        .service-details {
             display: none;
         }
 
-        body.dark-mode .logo-light {
-            display: none;
-        }
-
-        body.dark-mode .logo-dark {
-            display: block;
-        }
-
-        /* Call to Action Section */
-        .cta-section {
-            background-color: inherit;
-            color: inherit;
-            text-align: center;
-            padding: 50px 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-        }
-
-        .cta-section h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .cta-section p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        .cta-section button {
-            padding: 15px 30px;
-            font-size: 18px;
-            background-color: black;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 25px;
-            transition: background-color 0.3s, transform 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .cta-section button:hover {
-            background-color: #333;
-            transform: scale(1.05); /* Slight button enlargement on hover */
-        }
-
-        body.dark-mode .cta-section button {
-            background-color: white;
-            color: black;
-        }
-
-        /* Services Section */
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 60px 20px;
-            text-align: center;
-        }
-
-        .service {
-            background-color: #f0f0f0;
-            color: inherit;
-            padding: 30px;
-            margin: 15px;
-            border-radius: 10px;
-            width: 280px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .service:hover {
-            transform: translateY(-10px) scale(1.02); /* Subtle movement */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
-        }
-
-        body.dark-mode .service {
-            background-color: #2b2b2b;
-            color: white;
-            border-color: rgba(255, 255, 255, 0.1);
-        }
-
-        body.dark-mode .service:hover {
-            border-color: rgba(255, 255, 255, 0.3);
-        }
-
-        .service h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-
-        .service p {
-            font-size: 16px;
-            margin-bottom: 15px;
-        }
-
-        /* Footer Styles */
-        footer {
-            background-color: #333; /* Dark background for contrast */
-            color: white;
-            text-align: center;
-            padding: 20px;
+        .review-section {
             margin-top: 30px;
         }
 
-        footer a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 18px;
+        .review-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 30px;
         }
 
-        footer a:hover {
-            color: #ddd;
+        .review-section form input,
+        .review-section form textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
         }
 
-        /* Responsiveness */
+        .review-section form button {
+            padding: 10px;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .review-section form button:hover {
+            background-color: #1e90ff;
+            color: #fff;
+        }
+
+        .review-list {
+            margin-top: 20px;
+        }
+
+        .review {
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+        }
+
+        .review h4 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .review p {
+            margin: 5px 0;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #1e90ff;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* For mobile view */
         @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
             header h1 {
-                font-size: 36px;
+                font-size: 2em;
             }
 
             header p {
-                font-size: 18px;
-            }
-
-            .cta-section h2 {
-                font-size: 30px;
-            }
-
-            .service {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-        }
-
-        /* Mobile Adjustments (Below 480px) */
-        @media (max-width: 480px) {
-            .cta-section {
-                padding: 30px 10px; /* Reduce padding for mobile */
-            }
-
-            .service {
-                width: 100%; /* Stack services */
-                margin-bottom: 10px;
-            }
-
-            .announcement-banner {
-                font-size: 12px; /* Smaller font for announcement banner */
+                font-size: 1em;
             }
         }
     </style>
-    
-    <script>
-        let bannerEnabled = true; // Set to false to disable banner
-
-        window.onload = function() {
-            if (bannerEnabled) {
-                document.querySelector('.announcement-banner').style.display = 'block';
-            }
-
-            updateButtonAppearance();
-
-            document.querySelector('.dark-mode-toggle').addEventListener('click', function() {
-                document.body.classList.toggle('dark-mode');
-                updateButtonAppearance();
-            });
-        }
-
-        function updateButtonAppearance() {
-            const toggleButton = document.querySelector('.dark-mode-toggle');
-            if (document.body.classList.contains('dark-mode')) {
-                toggleButton.textContent = 'Light Mode';
-            } else {
-                toggleButton.textContent = 'Dark Mode';
-            }
-        }
-
-        function callForDeals() {
-            alert("Call or text 616-356-8102 to get exclusive deals!");
-        }
-    </script>
 </head>
-<body>
-    <!-- Dark Mode Toggle Button -->
-    <button class="dark-mode-toggle" aria-label="Toggle Dark Mode">Dark Mode</button>
 
-    <!-- Moving Announcement Banner (at the very top) -->
-    <div class="announcement-banner">
-        <div class="announcement-content">
-            <span>Special Deal: 20% off all services! Call 616-356-8102 for more details! | Now offering driveway cleaning at a discount!</span>
+<body>
+
+<!-- Navigation Menu -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="#services">Our Services</a>
+    <a href="#contact">Contact Us</a>
+</nav>
+
+<header>
+    <h1>J&L Power Washing</h1>
+    <p>Expert Power Washing Services for Homes and Businesses</p>
+</header>
+
+<!-- Main container -->
+<div class="container" id="serviceContainer">
+    <h2 id="services">Our Services</h2>
+    <div class="services-grid" id="servicesGrid"></div>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3 id="contact">Contact Us</h3>
+            <p>James Keeler</p>
+            <p>Phone: +1 616 385 8104</p>
         </div>
     </div>
+</footer>
 
-    <!-- Header -->
-    <header>
-        <!-- Two logos: one for light mode, one for dark mode -->
-        <img src="1.png" alt="J&L Power Washing Logo Light Mode" class="logo-light">
-        <img src="2.png" alt="J&L Power Washing Logo Dark Mode" class="logo-dark">
-        <h1>J&L Power Washing</h1>
-        <p>You Name It, We Wash It</p>
-    </header>
+<script>
+// Updated Google Apps Script API endpoint
+const googleSheetAPI = 'https://script.google.com/macros/s/AKfycbxPMWqKH7upMsS0yTpZe0zEnqt2_2sHuWsLwJPEWa2Duvl0nb2TMpgmoe18Bz4YWLd6Xw/exec';
 
-    <!-- Call-to-Action Section -->
-    <section class="cta-section">
-        <h2>Get Professional Power Washing Today!</h2>
-        <p>We offer a wide range of exterior cleaning services to make your home or business look its best.</p>
-        <button onclick="callForDeals()">Call for Deals! 616-356-8102</button>
-    </section>
+// Load services data
+function loadServices() {
+    fetch(googleSheetAPI)
+        .then(response => response.json())
+        .then(services => renderServices(services))
+        .catch(error => console.error('Error loading services:', error));
+}
 
-    <!-- Services Section -->
-    <section class="services">
-        <div class="service">
-            <h3>Residential Cleaning</h3>
-            <p>Keep your home’s exterior clean and beautiful with our professional power washing services.</p>
+// Render services on the grid
+function renderServices(services) {
+    const grid = document.getElementById('servicesGrid');
+    grid.innerHTML = '';
+
+    services.forEach(service => {
+        const card = document.createElement('div');
+        card.classList.add('service-card');
+        card.innerHTML = `
+            <img src="${service.imageUrls[0]}" alt="${service.name}" />
+            <div class="service-content">
+                <h3>${service.name}</h3>
+                <div class="price">${service.price}</div>
+                <div class="rating-section">
+                    <span>⭐ ${service.rating.toFixed(1)} (${service.ratingCount} ratings)</span>
+                </div>
+            </div>
+        `;
+        card.addEventListener('click', () => showServiceDetails(service));
+        grid.appendChild(card);
+    });
+}
+
+// Simulate navigation to service details
+function showServiceDetails(service) {
+    const container = document.getElementById('serviceContainer');
+    container.innerHTML = `
+        <div class="service-details">
+            <h2>${service.name}</h2>
+            <img src="${service.imageUrls[0]}" alt="${service.name}" />
+            <div class="price">${service.price}</div>
+            <p>${service.description}</p>
+            <div class="rating-section">
+                <span>⭐ ${service.rating.toFixed(1)} (${service.ratingCount} ratings)</span>
+            </div>
+
+            <div class="review-section">
+                <h3>Leave a Review</h3>
+                <form onsubmit="submitReview(event, '${service.name}')">
+                    <input type="text" id="reviewerName" placeholder="Your Name" required>
+                    <input type="number" id="rating" max="5" min="1" placeholder="Rating (1-5)" required>
+                    <textarea id="reviewText" placeholder="Your Review" required></textarea>
+                    <button type="submit">Submit Review</button>
+                </form>
+
+                <div class="review-list" id="reviewList">
+                    ${service.reviews.map(review => `
+                        <div class="review">
+                            <h4>${review.name} (⭐ ${review.rating})</h4>
+                            <p>${review.comment}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+
+            <button onclick="goBack()">Back to Services</button>
         </div>
-        <div class="service">
-            <h3>Commercial Cleaning</h3>
-            <p>We handle commercial properties with ease, from storefronts to large buildings.</p>
-        </div>
-        <div class="service">
-            <h3>Driveway Cleaning</h3>
-            <p>Make your driveway spotless with our high-pressure cleaning services.</p>
-        </div>
-    </section>
+    `;
+}
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 J&L Power Washing. All rights reserved. James Keeler, Michigan.</p>
-        <p><a href="tel:+16163568102">Call Us: 616-356-8102</a></p>
-        <p>Follow us on 
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </p>
-    </footer>
+// Submit a review
+function submitReview(event, serviceName) {
+    event.preventDefault();
+    
+    const reviewerName = document.getElementById('reviewerName').value;
+    const rating = document.getElementById('rating').value;
+    const reviewText = document.getElementById('reviewText').value;
+
+    const review = { name: reviewerName, rating, comment: reviewText };
+    const reviewList = document.getElementById('reviewList');
+
+    // Add review to the review list
+    reviewList.innerHTML += `
+        <div class="review">
+            <h4>${review.name} (⭐ ${review.rating})</h4>
+            <p>${review.comment}</p>
+        </div>
+    `;
+
+    // Clear form after submission
+    document.querySelector('form').reset();
+}
+
+// Go back to services grid
+function goBack() {
+    loadServices();
+}
+
+// Load services on page load
+document.addEventListener('DOMContentLoaded', loadServices);
+</script>
+
 </body>
 </html>
